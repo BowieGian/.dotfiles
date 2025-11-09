@@ -1,1 +1,1 @@
-PATH=$PATH:/home/bowie/.cargo/bin
+PATH=$PATH:~/.cargo/bin
