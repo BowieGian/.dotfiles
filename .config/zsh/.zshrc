@@ -105,6 +105,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(completion)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+source <(COMPLETE=zsh tms)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -131,6 +132,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(completion)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Bare Git Repo for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 fastfetch
