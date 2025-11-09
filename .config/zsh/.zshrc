@@ -105,7 +105,9 @@ export ZSH_AUTOSUGGEST_STRATEGY=(completion)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-source <(COMPLETE=zsh tms)
+
+# TODO: I don't have auto complete so this breaks everything
+# source <(COMPLETE=zsh tms)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
