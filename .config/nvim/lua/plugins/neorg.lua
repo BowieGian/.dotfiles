@@ -16,7 +16,9 @@ return {
 					config = {
 						workspaces = {
 							notes = "~/Documents/Notes",
+							-- notes = "E:/Documents/~Projects/Ubuntu/Notes",
 						},
+						default_workspace = "notes",
 					},
 				},
 			},
