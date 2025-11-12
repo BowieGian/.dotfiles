@@ -1,0 +1,13 @@
+# tms does not have permissions to search my shared Documents folder
+# Bookmarking each repo works for now
+bookmarks = [
+    "/home/bowie/Documents/dsa-practice",
+]
+
+[[search_dirs]]
+path = "/home/bowie"
+depth = 1
+
+[[search_dirs]]
+path = "/home/bowie/Documents"
+depth = 1
