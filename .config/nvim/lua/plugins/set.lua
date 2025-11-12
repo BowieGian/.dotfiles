@@ -35,6 +35,9 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 vim.opt.wildoptions = "pum"
 
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = ""
+
 vim.opt.list = true
 vim.opt.listchars = "tab:→ ,space: ,multispace:···•,lead:·,leadmultispace:▎···,extends:▸,precedes:◂,nbsp:◇,"
 
