@@ -4,6 +4,7 @@ return {
 	config = function()
 		vim.g.cmake_default_config = "build"
 		vim.g.cmake_link_compile_commands = 1
+		vim.g.cmake_console_size = 36
 
 		vim.keymap.set("n", "<leader>cq", ":CMakeToggle<CR><C-w><C-w>")
 
