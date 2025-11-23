@@ -9,7 +9,7 @@ return {
 				["core.concealer"] = {
 					config = {
 						folds = "true",
-						icon_preset = "basic",
+						icon_preset = "varied",
 					},
 				},
 				["core.dirman"] = {
@@ -19,6 +19,7 @@ return {
 							-- notes = "E:/Documents/~Projects/Ubuntu/Notes",
 						},
 						default_workspace = "notes",
+						index = "001_index.norg",
 					},
 				},
 			},
