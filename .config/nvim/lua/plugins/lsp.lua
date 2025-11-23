@@ -75,6 +75,7 @@ return {
 		})
 
 		local cmp = require("cmp")
+		local luasnip = require("luasnip")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		cmp.setup({
@@ -105,10 +106,46 @@ return {
 				-- ['<C-e>'] = cmp.mapping.abort(),
 				-- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 
-				["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-				["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-				["<Tab>"] = cmp.mapping.confirm({ select = true }),
-				["<C-Space>"] = cmp.mapping.complete(),
+				-- ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+				-- ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+				-- ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+				-- ["<C-Space>"] = cmp.mapping.complete(),
+
+				['<C-Space>'] = cmp.mapping.abort(),
+
+				['<CR>'] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						if luasnip.expandable() then
+							luasnip.expand()
+						else
+							cmp.confirm({
+								select = true,
+							})
+						end
+					else
+						fallback()
+					end
+				end),
+
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
 			}),
 			sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
