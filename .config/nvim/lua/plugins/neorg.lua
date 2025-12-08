@@ -15,7 +15,7 @@ return {
 				["core.dirman"] = {
 					config = {
 						workspaces = {
-							notes = "~/Documents/Notes",
+							notes = "~/Documents/Ubuntu/Notes",
 							-- notes = "E:/Documents/~Projects/Ubuntu/Notes",
 						},
 						default_workspace = "notes",
