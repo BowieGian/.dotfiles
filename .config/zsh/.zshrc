@@ -134,6 +134,9 @@ export ZSH_AUTOSUGGEST_STRATEGY=(completion)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Neovim Appimage location
+export PATH="$PATH:/opt/nvim/"
+
 # Bare Git Repo for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
