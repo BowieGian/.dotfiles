@@ -40,7 +40,7 @@ vim.opt.conceallevel = 2
 vim.opt.concealcursor = ""
 
 vim.opt.list = true
-vim.opt.listchars = "tab:→ ,space: ,multispace:···•,lead:·,leadmultispace:▎···,extends:▸,precedes:◂,nbsp:◇,"
+vim.opt.listchars = "tab:→ ,space: ,multispace:···•,lead:▎,leadmultispace:▎···,leadtab:▏ ,trail:•,extends:▸,precedes:◂,nbsp:◇,"
 
 --[[
 leadmultispace:
@@ -68,7 +68,7 @@ leading tabs only:
 1	tab	in	between
 2		tabs		in		between
 
-trailing spaces only (trail):
+trailing spaces only (trail): 
                     
 trailing spaces:                    
 trailing tabs:						

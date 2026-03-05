@@ -42,5 +42,14 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>/", ":noh<CR>")
 
+-- Putting an autocommand here until I add more
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking text",
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true}),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
 return {}
 
