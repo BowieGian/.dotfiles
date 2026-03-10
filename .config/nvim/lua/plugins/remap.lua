@@ -51,5 +51,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Netrw line numbers
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+
 return {}
 
