@@ -15,6 +15,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- Paste without overwriting buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("n", "<leader>P", "\"+P")
 
 -- Yank to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
